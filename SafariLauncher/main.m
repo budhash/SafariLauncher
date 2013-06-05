@@ -2,7 +2,7 @@
 //  main.m
 //  SafariLauncher
 //
-//  Created by budha on 6/5/13.
+//  Created by Budhaditya Das on 6/5/13.
 //  Copyright (c) 2013 Bytearc. All rights reserved.
 //
 

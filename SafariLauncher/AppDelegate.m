@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  SafariLauncher
 //
-//  Created by budha on 6/5/13.
+//  Created by Budhaditya Das on 6/5/13.
 //  Copyright (c) 2013 Bytearc. All rights reserved.
 //
 
@@ -16,6 +16,17 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //Wait for 15 seconds. This delay is needed as a workaroud for appium's
+    //"Could not start script, target application is not frontmost." instrumentation
+    //error. The delay fools the instruments into thinking that the application
+    //actually launched
+    [NSThread sleepForTimeInterval:20.0];
+    
+    //Launch the Mobile Safari browser
+    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    if (![[UIApplication sharedApplication] openURL:url])
+        NSLog(@"%@%@",@"Failed to open url:",[url description]);
     return YES;
 }
 

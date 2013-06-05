@@ -16,6 +16,9 @@
 		0CF376C5175F268800CF1F65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376C4175F268800CF1F65 /* Default.png */; };
 		0CF376C7175F268800CF1F65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376C6175F268800CF1F65 /* Default@2x.png */; };
 		0CF376C9175F268800CF1F65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376C8175F268800CF1F65 /* Default-568h@2x.png */; };
+		0CF376D4175F2E9500CF1F65 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D1175F2E9500CF1F65 /* AUTHORS */; };
+		0CF376D5175F2E9500CF1F65 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D2175F2E9500CF1F65 /* LICENSE */; };
+		0CF376D6175F2E9500CF1F65 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D3175F2E9500CF1F65 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		0CF376C4175F268800CF1F65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0CF376C6175F268800CF1F65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0CF376C8175F268800CF1F65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0CF376D1175F2E9500CF1F65 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		0CF376D2175F2E9500CF1F65 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0CF376D3175F2E9500CF1F65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 		0CF376A6175F268800CF1F65 = {
 			isa = PBXGroup;
 			children = (
+				0CF376D1175F2E9500CF1F65 /* AUTHORS */,
+				0CF376D2175F2E9500CF1F65 /* LICENSE */,
+				0CF376D3175F2E9500CF1F65 /* README.md */,
 				0CF376B8175F268800CF1F65 /* SafariLauncher */,
 				0CF376B1175F268800CF1F65 /* Frameworks */,
 				0CF376B0175F268800CF1F65 /* Products */,
@@ -154,6 +163,9 @@
 				0CF376C5175F268800CF1F65 /* Default.png in Resources */,
 				0CF376C7175F268800CF1F65 /* Default@2x.png in Resources */,
 				0CF376C9175F268800CF1F65 /* Default-568h@2x.png in Resources */,
+				0CF376D4175F2E9500CF1F65 /* AUTHORS in Resources */,
+				0CF376D5175F2E9500CF1F65 /* LICENSE in Resources */,
+				0CF376D6175F2E9500CF1F65 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +220,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -233,7 +245,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -247,6 +259,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SafariLauncher/SafariLauncher-Prefix.pch";
 				INFOPLIST_FILE = "SafariLauncher/SafariLauncher-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -258,6 +271,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SafariLauncher/SafariLauncher-Prefix.pch";
 				INFOPLIST_FILE = "SafariLauncher/SafariLauncher-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
