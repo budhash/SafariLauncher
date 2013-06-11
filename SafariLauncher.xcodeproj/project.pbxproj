@@ -19,6 +19,9 @@
 		0CF376D4175F2E9500CF1F65 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D1175F2E9500CF1F65 /* AUTHORS */; };
 		0CF376D5175F2E9500CF1F65 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D2175F2E9500CF1F65 /* LICENSE */; };
 		0CF376D6175F2E9500CF1F65 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D3175F2E9500CF1F65 /* README.md */; };
+		B7E340CE17614DDB00F99A2B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7E340CD17614DDB00F99A2B /* Settings.bundle */; };
+		B7E340D2176669B900F99A2B /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E340D1176669B800F99A2B /* Preferences.m */; };
+		B7E340D51766708B00F99A2B /* SafariLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E340D41766708B00F99A2B /* SafariLauncher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,11 @@
 		0CF376D1175F2E9500CF1F65 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		0CF376D2175F2E9500CF1F65 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0CF376D3175F2E9500CF1F65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B7E340CD17614DDB00F99A2B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		B7E340D0176669B800F99A2B /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		B7E340D1176669B800F99A2B /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		B7E340D31766708B00F99A2B /* SafariLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariLauncher.h; sourceTree = "<group>"; };
+		B7E340D41766708B00F99A2B /* SafariLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariLauncher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 				0CF376D1175F2E9500CF1F65 /* AUTHORS */,
 				0CF376D2175F2E9500CF1F65 /* LICENSE */,
 				0CF376D3175F2E9500CF1F65 /* README.md */,
+				B7E340CD17614DDB00F99A2B /* Settings.bundle */,
 				0CF376B8175F268800CF1F65 /* SafariLauncher */,
 				0CF376B1175F268800CF1F65 /* Frameworks */,
 				0CF376B0175F268800CF1F65 /* Products */,
@@ -87,6 +96,10 @@
 		0CF376B8175F268800CF1F65 /* SafariLauncher */ = {
 			isa = PBXGroup;
 			children = (
+				B7E340D0176669B800F99A2B /* Preferences.h */,
+				B7E340D1176669B800F99A2B /* Preferences.m */,
+				B7E340D31766708B00F99A2B /* SafariLauncher.h */,
+				B7E340D41766708B00F99A2B /* SafariLauncher.m */,
 				0CF376C1175F268800CF1F65 /* AppDelegate.h */,
 				0CF376C2175F268800CF1F65 /* AppDelegate.m */,
 				0CF376B9175F268800CF1F65 /* Supporting Files */,
@@ -166,6 +179,7 @@
 				0CF376D4175F2E9500CF1F65 /* AUTHORS in Resources */,
 				0CF376D5175F2E9500CF1F65 /* LICENSE in Resources */,
 				0CF376D6175F2E9500CF1F65 /* README.md in Resources */,
+				B7E340CE17614DDB00F99A2B /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +192,8 @@
 			files = (
 				0CF376BF175F268800CF1F65 /* main.m in Sources */,
 				0CF376C3175F268800CF1F65 /* AppDelegate.m in Sources */,
+				B7E340D2176669B900F99A2B /* Preferences.m in Sources */,
+				B7E340D51766708B00F99A2B /* SafariLauncher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +312,7 @@
 				0CF376CE175F268800CF1F65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

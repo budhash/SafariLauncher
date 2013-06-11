@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Preferences.h"
+#import "SafariLauncher.h"
+
+static BOOL foregroungCheckFlag = false;
 
 @implementation AppDelegate
 
@@ -15,18 +19,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+
+    Preferences *preferences = [Preferences sharedInstance];
+    NSArray * args = [[NSProcessInfo processInfo] arguments];
+    if([args count] > 1) {
+        NSString *urlArg = [args objectAtIndex: 1];
+        [SafariLauncher launch:urlArg withDelay:preferences.startDelay];
+    } else{
+        [SafariLauncher launch:preferences.launchUrl withDelay:preferences.startDelay];
+    }
     
-    //Wait for 15 seconds. This delay is needed as a workaroud for appium's
-    //"Could not start script, target application is not frontmost." instrumentation
-    //error. The delay fools the instruments into thinking that the application
-    //actually launched
-    [NSThread sleepForTimeInterval:20.0];
-    
-    //Launch the Mobile Safari browser
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
-    if (![[UIApplication sharedApplication] openURL:url])
-        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+	[self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -45,16 +48,43 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    foregroungCheckFlag = true;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if(foregroungCheckFlag){
+        Preferences *preferences = [Preferences sharedInstance];
+        [SafariLauncher launch:preferences.launchUrl withDelay:preferences.nonStartDelay];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    foregroungCheckFlag = false;
+    Preferences *preferences = [Preferences sharedInstance];
+    if (!url) {
+        [SafariLauncher launch:preferences.launchUrl withDelay:preferences.nonStartDelay];
+    }else{
+        
+        NSString *launchUrl = [[url absoluteString] substringFromIndex:5];
+        if([launchUrl hasPrefix:@"http//"]){
+            launchUrl = [launchUrl stringByReplacingOccurrencesOfString:@"http//"
+                                                             withString:@"http://"];
+        }else if([launchUrl hasPrefix:@"https//"]){
+            launchUrl = [launchUrl stringByReplacingOccurrencesOfString:@"https//"
+                                                             withString:@"https://"];
+        }
+        
+        [SafariLauncher launch:launchUrl withDelay:preferences.nonStartDelay];
+    }
+    return YES;
 }
 
 @end
