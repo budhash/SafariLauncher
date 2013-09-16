@@ -19,6 +19,7 @@
 		0CF376D4175F2E9500CF1F65 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D1175F2E9500CF1F65 /* AUTHORS */; };
 		0CF376D5175F2E9500CF1F65 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D2175F2E9500CF1F65 /* LICENSE */; };
 		0CF376D6175F2E9500CF1F65 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CF376D3175F2E9500CF1F65 /* README.md */; };
+		B70E4318176F8962003E5E3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B70E4317176F8962003E5E3B /* ViewController.m */; };
 		B7E340CE17614DDB00F99A2B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7E340CD17614DDB00F99A2B /* Settings.bundle */; };
 		B7E340D2176669B900F99A2B /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E340D1176669B800F99A2B /* Preferences.m */; };
 		B7E340D51766708B00F99A2B /* SafariLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E340D41766708B00F99A2B /* SafariLauncher.m */; };
@@ -41,6 +42,8 @@
 		0CF376D1175F2E9500CF1F65 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		0CF376D2175F2E9500CF1F65 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0CF376D3175F2E9500CF1F65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B70E4316176F8962003E5E3B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B70E4317176F8962003E5E3B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B7E340CD17614DDB00F99A2B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B7E340D0176669B800F99A2B /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		B7E340D1176669B800F99A2B /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				B7E340D41766708B00F99A2B /* SafariLauncher.m */,
 				0CF376C1175F268800CF1F65 /* AppDelegate.h */,
 				0CF376C2175F268800CF1F65 /* AppDelegate.m */,
+				B70E4316176F8962003E5E3B /* ViewController.h */,
+				B70E4317176F8962003E5E3B /* ViewController.m */,
 				0CF376B9175F268800CF1F65 /* Supporting Files */,
 			);
 			path = SafariLauncher;
@@ -194,6 +199,7 @@
 				0CF376C3175F268800CF1F65 /* AppDelegate.m in Sources */,
 				B7E340D2176669B900F99A2B /* Preferences.m in Sources */,
 				B7E340D51766708B00F99A2B /* SafariLauncher.m in Sources */,
+				B70E4318176F8962003E5E3B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

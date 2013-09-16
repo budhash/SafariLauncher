@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Preferences.h"
 #import "SafariLauncher.h"
+#import "ViewController.h"
 
 static BOOL foregroungCheckFlag = false;
 
@@ -19,15 +20,12 @@ static BOOL foregroungCheckFlag = false;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+    ViewController *mainView = [[ViewController alloc] init];
+    //[self.window addSubview:mainView.view];
 
-    Preferences *preferences = [Preferences sharedInstance];
-    NSArray * args = [[NSProcessInfo processInfo] arguments];
-    if([args count] > 1) {
-        NSString *urlArg = [args objectAtIndex: 1];
-        [SafariLauncher launch:urlArg withDelay:preferences.startDelay];
-    } else{
-        [SafariLauncher launch:preferences.launchUrl withDelay:preferences.startDelay];
-    }
+    [self.window setRootViewController:mainView];
     
 	[self.window makeKeyAndVisible];
     return YES;

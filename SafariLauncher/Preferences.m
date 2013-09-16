@@ -19,12 +19,24 @@ static NSUInteger const NON_START_DELAY = 0;
 @synthesize startDelay = startDelay_;
 @synthesize nonStartDelay = nonStartDelay_;
 
+/*
 static Preferences *singleton = nil;
-+ (Preferences*) sharedInstance {
+ + (Preferences*) sharedInstance {
     if (singleton == nil) {
         singleton = [[Preferences alloc] init];
     }
     return singleton;
+}
+*/
++ (Preferences *)sharedInstance
+{
+    //  Static local predicate must be initialized to 0
+    static Preferences *sharedInstance = nil;
+    static dispatch_once_t onceToken = 0;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[Preferences alloc] init];
+    });
+    return sharedInstance;
 }
 
 + (void) initPreferences {

@@ -2,7 +2,7 @@
 //  SafariLauncher.h
 //  SafariLauncher
 //
-//  Created by qeauto on 6/10/13.
+//  Created by Budhaditya Das on 6/5/13.
 //  Copyright (c) 2013 Bytearc. All rights reserved.
 //
 
