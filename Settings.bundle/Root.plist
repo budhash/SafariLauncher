@@ -34,7 +34,7 @@
 			<key>Key</key>
 			<string>preference_startDelay</string>
 			<key>DefaultValue</key>
-			<integer>20</integer>
+			<integer>2</integer>
 			<key>MinimumValue</key>
 			<integer>0</integer>
 			<key>MaximumValue</key>
