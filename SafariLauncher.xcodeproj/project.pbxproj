@@ -278,11 +278,13 @@
 		0CF376CD175F268800CF1F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "${IDENTITY_NAME}";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SafariLauncher/SafariLauncher-Prefix.pch";
 				INFOPLIST_FILE = "SafariLauncher/SafariLauncher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=*]" = "${IDENTITY_CODE}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -290,11 +292,13 @@
 		0CF376CE175F268800CF1F65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "${IDENTITY_NAME}";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SafariLauncher/SafariLauncher-Prefix.pch";
 				INFOPLIST_FILE = "SafariLauncher/SafariLauncher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=*]" = "${IDENTITY_CODE}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
